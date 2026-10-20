@@ -1,11 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>el catrin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Catrín Mariachi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --negro:#15110e; --carbon:#221c17; --oro:#e8a317; --rojo:#c8102e; --hueso:#f3ede0; --tenue:#b9ae9c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--negro);color:var(--hueso);font-family:Karla,system-ui,sans-serif;font-size:1.08rem;line-height:1.7}
+h1,h2,h3{font-family:'Rozha One',Georgia,serif;font-weight:400;line-height:1.1;margin:0}
+a{color:var(--oro)}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:clamp(1.5rem,5vw,4rem);align-items:center;max-width:1100px;margin:0 auto;padding:clamp(1.5rem,5vw,4rem) 1.25rem}
+.hero h1{font-size:clamp(3rem,9vw,6.5rem);color:var(--oro)}
+.hero p{max-width:34ch;color:var(--tenue);margin:1.25rem 0 0}
+.hero .equipo{color:var(--hueso);font-weight:600;margin-top:2rem}
+.foto{margin:0;border:3px solid var(--oro);border-radius:2px;padding:10px;background:var(--carbon);transform:rotate(1.5deg)}
+.foto img{display:block;width:100%;height:auto;max-height:80vh;object-fit:cover;object-position:top}
+
+main{max-width:760px;margin:0 auto;padding:0 1.25rem 4rem}
+section{padding:3rem 0;border-top:2px solid var(--oro)}
+section h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:1.25rem}
+section p{margin:0 0 1rem}
+
+.simbolos{display:grid;gap:0;margin:1.5rem 0 0;padding:0}
+.simbolos div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid #3a3029}
+.simbolos dt{font-family:'Rozha One',serif;color:var(--oro);font-size:1.25rem}
+.simbolos dd{margin:0}
+.simbolos .corazon dt{color:var(--rojo);filter:brightness(1.5)}
+
+ul.materiales{padding-left:1.2rem;margin:0}
+ul.materiales li{margin-bottom:.4rem}
+.pendiente{border:2px dashed var(--rojo);background:rgba(200,16,46,.12);padding:1rem 1.25rem;border-radius:2px}
+.pendiente strong{color:var(--hueso)}
+
+footer{text-align:center;color:var(--tenue);padding:2rem 1.25rem;border-top:2px solid var(--oro);font-size:.95rem}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .foto{max-width:360px;margin:0 auto;transform:none}
+  .simbolos div{grid-template-columns:1fr;gap:.25rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-    <h1>Hola</h1>
-    <p>el elegimos este material debido a que x y z razon </p>
+
+<header class="hero">
+  <div>
+    <h1>El Catrín Mariachi</h1>
+    <p>Elegancia, música y la certeza de que la muerte nos iguala a todos.</p>
+    <!-- EDITAR: nombres del equipo, materia y grupo -->
+    <p class="equipo">Equipo: Javier Lionel Muñoz Cutiño Eduardo Gutierrez Avila Axel Abelardo Meza
+Alarcon Alejandro Aispuro Sanchez Anna Sophia Iribe Flores Patricia Salcido Mojaridn </p>
+  </div>
+  <figure class="foto">
+    <img src="catrin.jpeg" alt="Catrín vestido de mariachi con traje negro y detalles dorados, moño rojo y sombrero charro, con la cara de calavera decorada con corazones.">
+  </figure>
+</header>
+
+<main>
+
+  <section id="concepto">
+    <h2>¿Por qué elegimos este concepto?</h2>
+    <p>El Catrín es una figura relacionada con la cultura mexicana y con la tradición del Día de Muertos. Su origen está relacionado con José Guadalupe Posada y su famosa “Calavera Garbancera”. Después, Diego Rivera retomó esta imagen y la representó con ropa elegante, dando origen a la imagen de La Catrina que conocemos actualmente.</p>
+    <p>El Catrín representa la elegancia, pero también recuerda que la muerte llega para todas las personas sin importar su posición social. Además, estas figuras tienen un significado de crítica social y actualmente son parte importante de la cultura y las celebraciones mexicanas.</p>
+  </section>
+
+  <section id="representa">
+    <h2>¿Qué representa nuestro Catrín?</h2>
+    <p>Nos inspiramos en el diseño del mariachi porque es un traje típico mexicano. Esta figura representaba una crítica hacia las personas que imitaban las costumbres europeas y presumían pertenecer a una clase social alta. Su traje se caracteriza principalmente por su apariencia elegante y sofisticada.</p>
+    <p>Está vestido de mariachi por su gran amor hacia la música.</p>
+  </section>
+
+  <section id="simbolos">
+    <h2>Elementos simbólicos</h2>
+    <dl class="simbolos">
+      <div class="corazon"><dt>Los corazones</dt><dd>Significan que el alma nunca muere.</dd></div>
+      <div><dt>El moño</dt><dd>Representa la formalidad del evento.</dd></div>
+      <div><dt>Los detalles dorados</dt><dd>Representan el brillo al final del túnel, cuando falleció.</dd></div>
+      <div><dt>El traje de mariachi</dt><dd>Muestra su gran amor por la música y es un traje típico mexicano.</dd></div>
+    </dl>
+  </section>
+
+  <section id="materiales">
+    <h2>Materiales utilizados</h2>
+    <!-- EDITAR: confirmen y corrijan esta lista -->
+    <ul class="materiales">
+      <li>Cartón y papel de china negro (estructura y cuerpo)</li>
+      <li>Foami escarchado dorado, negro y rojo (adornos, moño y detalles)</li>
+      <li>Tijeras</li>
+      <li>Silicón</li>
+      <li>Cúter</li>
+      <li>Cinta</li>
+    </ul>
+  </section>
+
+  <section id="organizacion">
+    <h2>¿Cómo nos organizamos?</h2>
+    <p>Nos juntamos todos como equipo para lograr el objetivo de terminar el Catrín.</p>
+  </section>
+
+  <section id="dificultad">
+    <h2>Dificultad y cómo la resolvimos</h2>
+    <p>Nos costó trabajo conseguir y manejar los materiales, y también coincidir en los tiempos, porque cada uno tenía horarios distintos para juntarnos.</p>
+    <p>Lo resolvimos organizándonos entre todos y buscando los momentos en que podíamos reunirnos para avanzar juntos.</p>
+  </section>
+
+  <section id="aprendizaje">
+    <h2>¿Qué aprendimos?</h2>
+    <p>Aprendimos a trabajar en equipo, a hacer cosas nuevas y a ser pacientes con nuestros compañeros.</p>
+  </section>
+
+</main>
+
+<footer>Proyecto de Día de Muertos · Prepa USM </footer>
+
 </body>
 </html>
